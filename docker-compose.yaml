@@ -1,0 +1,14 @@
+services:
+  hw:
+    build: .
+    ports:
+      - "8000:8000"
+
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=567234
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=hw02
